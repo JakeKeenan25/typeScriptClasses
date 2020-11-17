@@ -1,0 +1,35 @@
+{
+  "name": "",
+  "version": "0.0.0",
+  "description": "",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "files": [
+    "build/src"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [],
+  "scripts": {
+    "start": "node build/src/index.js",
+    "lint": "gts lint",
+		"clean": "gts clean",
+    "build": "tsc",
+    "fix": "gts fix",
+		"prepare": "gts fix",
+
+		"test": "mocha -r ts-node/register src/tests/**/*.test.ts",
+		"pretest": "npm run build",
+		"prebuild": "npm run fix"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.0.4",
+    "@types/node": "^14.11.2",
+    "chai": "^4.2.0",
+    "gts": "^3.0.2",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5"
+  }
+}
