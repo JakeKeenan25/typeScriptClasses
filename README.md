@@ -1,0 +1,2 @@
+# typeScriptClasses
+Classes, Interface, Models
